@@ -1,5 +1,6 @@
 from app.fetch_stocks.fetch_stocks import fetch_filtered_stocks
 from app.indicators.moving_averages import get_moving_average
+from app.indicators.keltner_channel import get_keltner_channel
 import yfinance as yf
 def run():
     # """Main entry point for the paper trading app."""
@@ -12,13 +13,16 @@ def run():
     #     print("\nNo stocks matched the criteria today.")
 
     ticker = "AAPL"
-    twenty_DMA = get_moving_average(ticker, 20)
-    fifty_DMA = get_moving_average(ticker, 50)
-    two_hundred_DMA = get_moving_average(ticker, 200)
+    # twenty_DMA = get_moving_average(ticker, 20)
+    # fifty_DMA = get_moving_average(ticker, 50)
+    # two_hundred_DMA = get_moving_average(ticker, 200)
 
-    print(f"Twenty DMA: {twenty_DMA}")
-    print(f"Fifty DMA: {fifty_DMA}")
-    print(f"Two Hundred DMA: {two_hundred_DMA}")
+    # print(f"Twenty DMA: {twenty_DMA}")
+    # print(f"Fifty DMA: {fifty_DMA}")
+    # print(f"Two Hundred DMA: {two_hundred_DMA}")
+
+    print(get_keltner_channel(ticker))
+
 
    
 

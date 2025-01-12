@@ -1,1 +1,2 @@
 from .moving_averages import get_moving_average
+from .keltner_channel import get_keltner_channel
